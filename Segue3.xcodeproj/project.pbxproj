@@ -11,6 +11,9 @@
 		2ACF12A828A6A5C70035BD4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF12A728A6A5C70035BD4D /* ContentView.swift */; };
 		2ACF12AA28A6A5CC0035BD4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ACF12A928A6A5CC0035BD4D /* Assets.xcassets */; };
 		2ACF12AD28A6A5CC0035BD4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ACF12AC28A6A5CC0035BD4D /* Preview Assets.xcassets */; };
+		2ACF12B528A6A7100035BD4D /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF12B428A6A7100035BD4D /* Business.swift */; };
+		2ACF12BA28A6A7AC0035BD4D /* YelpFusionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF12B928A6A7AC0035BD4D /* YelpFusionController.swift */; };
+		2ACF12BC28A6A7D00035BD4D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF12BB28A6A7D00035BD4D /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		2ACF12A728A6A5C70035BD4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2ACF12A928A6A5CC0035BD4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ACF12AC28A6A5CC0035BD4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2ACF12B428A6A7100035BD4D /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		2ACF12B928A6A7AC0035BD4D /* YelpFusionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpFusionController.swift; sourceTree = "<group>"; };
+		2ACF12BB28A6A7D00035BD4D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +57,12 @@
 		2ACF12A428A6A5C70035BD4D /* Segue3 */ = {
 			isa = PBXGroup;
 			children = (
+				2ACF12B328A6A7050035BD4D /* Models */,
 				2ACF12A528A6A5C70035BD4D /* Segue3App.swift */,
 				2ACF12A728A6A5C70035BD4D /* ContentView.swift */,
 				2ACF12A928A6A5CC0035BD4D /* Assets.xcassets */,
 				2ACF12AB28A6A5CC0035BD4D /* Preview Content */,
+				2ACF12B828A6A7730035BD4D /* NetworkControllers */,
 			);
 			path = Segue3;
 			sourceTree = "<group>";
@@ -65,6 +73,23 @@
 				2ACF12AC28A6A5CC0035BD4D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2ACF12B328A6A7050035BD4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2ACF12B428A6A7100035BD4D /* Business.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2ACF12B828A6A7730035BD4D /* NetworkControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2ACF12BB28A6A7D00035BD4D /* NetworkError.swift */,
+				2ACF12B928A6A7AC0035BD4D /* YelpFusionController.swift */,
+			);
+			path = NetworkControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ACF12A828A6A5C70035BD4D /* ContentView.swift in Sources */,
+				2ACF12B528A6A7100035BD4D /* Business.swift in Sources */,
 				2ACF12A628A6A5C70035BD4D /* Segue3App.swift in Sources */,
+				2ACF12BA28A6A7AC0035BD4D /* YelpFusionController.swift in Sources */,
+				2ACF12BC28A6A7D00035BD4D /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
