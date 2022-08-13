@@ -59,20 +59,4 @@ class YelpFusionController {
         }.resume()
     }
     
-    static func fetchImage(with url: URL, completion: @escaping (Result<UIImage, NetworkError>) -> Void) {
-        
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            if let error = error {
-                print("There was an error")
-                return completion(.failure(.thrownError(error)))
-            }
-            
-            guard let data = data else { return completion(.failure(.noData)) }
-            print(data)
-            
-            guard let image = UIImage(data: data) else { return completion(.failure(.noImage)) }
-            
-            completion(.success(image))
-        }.resume()
-    }
 }
