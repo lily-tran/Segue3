@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A91C27228A86CBD004D8096 /* AddTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A91C27128A86CBD004D8096 /* AddTripView.swift */; };
 		2A95999828A8346200ADBE90 /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A95999728A8346200ADBE90 /* TripListView.swift */; };
 		2A95999C28A83A5200ADBE90 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A95999B28A83A5200ADBE90 /* Trip.swift */; };
-		2AA4A34128A6E8300052828B /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4A34028A6E8300052828B /* PersistenceController.swift */; };
+		2AA4A34128A6E8300052828B /* TripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4A34028A6E8300052828B /* TripController.swift */; };
 		2ACF12A628A6A5C70035BD4D /* Segue3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF12A528A6A5C70035BD4D /* Segue3App.swift */; };
-		2ACF12A828A6A5C70035BD4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF12A728A6A5C70035BD4D /* ContentView.swift */; };
+		2ACF12A828A6A5C70035BD4D /* TinderAddBusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF12A728A6A5C70035BD4D /* TinderAddBusinessView.swift */; };
 		2ACF12AA28A6A5CC0035BD4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ACF12A928A6A5CC0035BD4D /* Assets.xcassets */; };
 		2ACF12AD28A6A5CC0035BD4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ACF12AC28A6A5CC0035BD4D /* Preview Assets.xcassets */; };
 		2ACF12B528A6A7100035BD4D /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF12B428A6A7100035BD4D /* Business.swift */; };
@@ -20,12 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A91C27128A86CBD004D8096 /* AddTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripView.swift; sourceTree = "<group>"; };
 		2A95999728A8346200ADBE90 /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
 		2A95999B28A83A5200ADBE90 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
-		2AA4A34028A6E8300052828B /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		2AA4A34028A6E8300052828B /* TripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripController.swift; sourceTree = "<group>"; };
 		2ACF12A228A6A5C70035BD4D /* Segue3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Segue3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ACF12A528A6A5C70035BD4D /* Segue3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue3App.swift; sourceTree = "<group>"; };
-		2ACF12A728A6A5C70035BD4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2ACF12A728A6A5C70035BD4D /* TinderAddBusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderAddBusinessView.swift; sourceTree = "<group>"; };
 		2ACF12A928A6A5CC0035BD4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ACF12AC28A6A5CC0035BD4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2ACF12B428A6A7100035BD4D /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
@@ -44,11 +46,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A91C26F28A86417004D8096 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A91C27028A86438004D8096 /* ModelControllers */,
+				2ACF12B828A6A7730035BD4D /* NetworkControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2A91C27028A86438004D8096 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2AA4A34028A6E8300052828B /* TripController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
 		2A95999628A8341E00ADBE90 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2ACF12A728A6A5C70035BD4D /* ContentView.swift */,
+				2ACF12A728A6A5C70035BD4D /* TinderAddBusinessView.swift */,
 				2A95999728A8346200ADBE90 /* TripListView.swift */,
+				2A91C27128A86CBD004D8096 /* AddTripView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -97,12 +117,11 @@
 			isa = PBXGroup;
 			children = (
 				2ACF12A528A6A5C70035BD4D /* Segue3App.swift */,
-				2AA4A33D28A6B5A50052828B /* Helpers&Extensions */,
 				2ACF12B328A6A7050035BD4D /* Models */,
 				2A95999628A8341E00ADBE90 /* Views */,
-				2ACF12B828A6A7730035BD4D /* NetworkControllers */,
+				2A91C26F28A86417004D8096 /* Controllers */,
 				2AA4A33F28A6D2350052828B /* Resources */,
-				2AA4A34028A6E8300052828B /* PersistenceController.swift */,
+				2AA4A33D28A6B5A50052828B /* Helpers&Extensions */,
 			);
 			path = Segue3;
 			sourceTree = "<group>";
@@ -204,11 +223,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A95999828A8346200ADBE90 /* TripListView.swift in Sources */,
-				2ACF12A828A6A5C70035BD4D /* ContentView.swift in Sources */,
+				2ACF12A828A6A5C70035BD4D /* TinderAddBusinessView.swift in Sources */,
+				2A91C27228A86CBD004D8096 /* AddTripView.swift in Sources */,
 				2ACF12B528A6A7100035BD4D /* Business.swift in Sources */,
 				2ACF12A628A6A5C70035BD4D /* Segue3App.swift in Sources */,
 				2A95999C28A83A5200ADBE90 /* Trip.swift in Sources */,
-				2AA4A34128A6E8300052828B /* PersistenceController.swift in Sources */,
+				2AA4A34128A6E8300052828B /* TripController.swift in Sources */,
 				2ACF12BA28A6A7AC0035BD4D /* YelpFusionController.swift in Sources */,
 				2ACF12BC28A6A7D00035BD4D /* NetworkError.swift in Sources */,
 			);
@@ -338,7 +358,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Segue3/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Segue3/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 385FZH5ARA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -367,7 +387,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Segue3/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Segue3/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 385FZH5ARA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

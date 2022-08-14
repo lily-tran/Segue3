@@ -8,10 +8,34 @@
 import Foundation
 // MARK: - Persistence
 // create a place to store our data, save data, load data
-class PersistenceController {
+class TripController {
     
-    static let shared = PersistenceController()
+    static let shared = TripController()
     var trips: [Trip] = []
+    
+    init() {
+        loadFromPersistenceStore()
+    }
+    func createTrip(name: String) {
+        let newTrip = Trip(id: UUID(), place: name, businesses: [])
+        trips.append(newTrip)
+        saveToPersistenceStore()
+        
+    }
+    
+    func deleteTrip(trip: Trip) {
+        guard let index = trips.firstIndex(of: trip) else {
+            return
+        }
+        trips.remove(at: index)
+        saveToPersistenceStore()
+    }
+    
+    func addBusiness(trip: Trip, business: Business) {
+        trip.businesses.append(business)
+        saveToPersistenceStore()
+    }
+    
     
     func createPersistenceStore() -> URL {
         let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)

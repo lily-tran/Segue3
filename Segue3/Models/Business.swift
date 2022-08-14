@@ -8,7 +8,7 @@
 import Foundation
 
 struct Businesses: Codable {
-    let businesses: [Business]
+    var businesses: [Business]
 }
 
 struct Business: Identifiable, Codable {
@@ -21,15 +21,13 @@ struct Business: Identifiable, Codable {
     let rating: Float?
     let review_count: Int
     let url: String
-    let categories: [String: String]
+    let categories: [ThisCategory]
 }
-
-//struct ThisCategory: Identifiable, Codable {
-//    var id: ObjectIdentifier
 //
-//    let alias: String
-//    let title: String
-//}
+struct ThisCategory: Codable {
+    let alias: String
+    let title: String
+}
 
 //struct Coordinates: Codable {
 //    let latitude: Float

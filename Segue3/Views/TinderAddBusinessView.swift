@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  TinderAddBusinessView.swift
 //  Segue3
 //
 //  Created by Lily Tran on 8/12/22.
@@ -7,35 +7,45 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @ObservedObject private var bvm = BusinessViewModel()
-    private var persist = PersistenceController.shared
+struct TinderAddBusinessView: View {
+    @ObservedObject private var bvm = BusinessViewModel(place: "Italy")
+    private var persist = TripController.shared
     
     var body: some View {
+        
         ZStack(alignment: .trailing){
-            ForEach(bvm.businesses) { business in
-                TinderCardView(business: business)
-            }
             Text("you have reached the end!")
             
+            ForEach(bvm.businesses) { business in
+                TinderCardView(business: business)
+                
+            }
+            
+            
+        }
+        if bvm.businesses.isEmpty {
+            ProgressView()
         }
         //.navigationTitle("Events")
     }
+    
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct TinderAddBusinessView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TinderAddBusinessView()
     }
 }
 
 class BusinessViewModel: ObservableObject {
+    var place: String
     @Published var businesses: [Business] = []
     @Published var businessImage: UIImage = ((UIImage(systemName: "circle") ?? UIImage(systemName: "square"))!)
     
-    init() {
+    init(place: String) {
+        self.place = place
         DispatchQueue.main.async {
-            self.getEvents(location: "San Diego, CA")
+            self.getEvents(location: place)
         }
     }
 
@@ -50,10 +60,6 @@ class BusinessViewModel: ObservableObject {
                                     }
             }
         }
-        
-    }
-    
-    func getImage(business: Business) {
         
     }
 }
