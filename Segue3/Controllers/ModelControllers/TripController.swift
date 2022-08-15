@@ -8,32 +8,55 @@
 import Foundation
 // MARK: - Persistence
 // create a place to store our data, save data, load data
-class TripController {
+class TripController: ObservableObject {
     
-    static let shared = TripController()
-    var trips: [Trip] = []
+    @Published var trips: [Trip] = []
     
     init() {
         loadFromPersistenceStore()
     }
     func createTrip(name: String) {
-        let newTrip = Trip(id: UUID(), place: name, businesses: [])
+        let newTrip = Trip(place: name, businesses: [])
         trips.append(newTrip)
         saveToPersistenceStore()
+        // loadFromPersistenceStore()
+    }
+    
+    func deleteTrip(offsets: IndexSet) {
+        trips.remove(atOffsets: offsets)
+        saveToPersistenceStore()
+        // loadFromPersistenceStore()
         
     }
     
-    func deleteTrip(trip: Trip) {
+    func findTrip(trip: Trip) -> Int {
         guard let index = trips.firstIndex(of: trip) else {
-            return
+            return -10
         }
-        trips.remove(at: index)
-        saveToPersistenceStore()
+        return index
     }
     
     func addBusiness(trip: Trip, business: Business) {
-        trip.businesses.append(business)
+        let index = findTrip(trip: trip)
+        if index == -10 {
+            return
+        }
+        trips[index].businesses.append(business)
+        print(business.name)
+        print("number of businesses: \(trips[index].businesses.count) in trip \(trips[index].place)")
         saveToPersistenceStore()
+        // loadFromPersistenceStore()
+    }
+    
+    func deleteBusiness(trip: Trip, offsets: IndexSet) {
+        let index = findTrip(trip: trip)
+        if index == -10 {
+            return
+        }
+        trips[index].businesses.remove(atOffsets: offsets)
+        saveToPersistenceStore()
+        // loadFromPersistenceStore()
+        
     }
     
     
@@ -52,7 +75,6 @@ class TripController {
             
             try data.write(to: createPersistenceStore())
         } catch {
-            print("Error encoding our OBJECTS ARRAY")
             print("Error in \(#function): \(error.localizedDescription) \n---\n \(error)")
         }
     }
@@ -64,7 +86,6 @@ class TripController {
             //                              decode as , decode from
             trips = try JSONDecoder().decode([Trip].self, from: data)
         } catch {
-            print("Error decoding out data into OBJECTS ARRAY.")
             print("Error in \(#function): \(error.localizedDescription) \n---\n \(error)")
         }
     }

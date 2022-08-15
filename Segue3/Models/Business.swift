@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import CoreImage
 
 struct Businesses: Codable {
     var businesses: [Business]
 }
 
-struct Business: Identifiable, Codable {
+struct Business: Identifiable, Codable, Hashable {
     // let coordinates: Coordinates
     let id: String
     let image_url: URL
@@ -21,13 +22,13 @@ struct Business: Identifiable, Codable {
     let rating: Float?
     let review_count: Int
     let url: String
-    let categories: [ThisCategory]
+    //let categories: [ThisCategory]
 }
 //
-struct ThisCategory: Codable {
-    let alias: String
-    let title: String
-}
+//struct ThisCategory: Codable {
+//    let alias: String
+//    let title: String
+//}
 
 //struct Coordinates: Codable {
 //    let latitude: Float

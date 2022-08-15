@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Trip: Codable, Identifiable {
+class Trip: ObservableObject, Codable, Identifiable {
     let id: UUID
     let place: String
     var businesses: [Business]
@@ -24,5 +24,5 @@ extension Trip: Equatable {
     static func == (rhs: Trip, lhs: Trip) -> Bool {
         return rhs.id == lhs.id
     }
-    
+
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct AddTripView: View {
     //let exercise: Exercise
     @ObservedObject var vm = AddTripViewModel()
+    @Environment(\.rootPresentation) var rootPresentation: Binding<Bool>
     
     
     var body: some View {
@@ -28,7 +29,13 @@ struct AddTripView: View {
 //                Text("Maximum Weight: \(Int(vm.weight)) \(vm.metric)")
 //                Slider(value: $vm.weight, in: 0...1_000, step: 2)
                 Button {
-                    TripController.shared.createTrip(name: vm.name)
+                    if !vm.name.isEmpty {
+                        TripController().createTrip(name: vm.name)
+                        rootPresentation.wrappedValue = false
+                    } else {
+                        // present an alert, but for now, we will just do nothing
+                        print("no name so cannot add")
+                    }
                 } label: {
                     Text("Add")
                         // .background(Color.gray)

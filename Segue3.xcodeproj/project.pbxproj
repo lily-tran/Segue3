@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A4B0E7C28A98F4B0086895E /* CustomEnvironmentProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B0E7B28A98F4B0086895E /* CustomEnvironmentProperties.swift */; };
+		2A772BF528AA1067009EE47A /* BusinessListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A772BF428AA1067009EE47A /* BusinessListView.swift */; };
+		2A772BF728AA2DF4009EE47A /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A772BF628AA2DF4009EE47A /* ActivityView.swift */; };
+		2A772BFA28AA314A009EE47A /* TinderBusinessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A772BF928AA314A009EE47A /* TinderBusinessViewModel.swift */; };
+		2A772BFE28AA882E009EE47A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A772BFD28AA882E009EE47A /* CardView.swift */; };
+		2A772C0028AA93EC009EE47A /* TinderStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A772BFF28AA93EC009EE47A /* TinderStackView.swift */; };
 		2A91C27228A86CBD004D8096 /* AddTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A91C27128A86CBD004D8096 /* AddTripView.swift */; };
 		2A95999828A8346200ADBE90 /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A95999728A8346200ADBE90 /* TripListView.swift */; };
 		2A95999C28A83A5200ADBE90 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A95999B28A83A5200ADBE90 /* Trip.swift */; };
@@ -21,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A4B0E7B28A98F4B0086895E /* CustomEnvironmentProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEnvironmentProperties.swift; sourceTree = "<group>"; };
+		2A772BF428AA1067009EE47A /* BusinessListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListView.swift; sourceTree = "<group>"; };
+		2A772BF628AA2DF4009EE47A /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		2A772BF928AA314A009EE47A /* TinderBusinessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderBusinessViewModel.swift; sourceTree = "<group>"; };
+		2A772BFD28AA882E009EE47A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		2A772BFF28AA93EC009EE47A /* TinderStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderStackView.swift; sourceTree = "<group>"; };
 		2A91C27128A86CBD004D8096 /* AddTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripView.swift; sourceTree = "<group>"; };
 		2A95999728A8346200ADBE90 /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
 		2A95999B28A83A5200ADBE90 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
@@ -46,6 +58,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A4B0E7D28A98F560086895E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A4B0E7B28A98F4B0086895E /* CustomEnvironmentProperties.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2A772BF228AA1041009EE47A /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				2A91C27128A86CBD004D8096 /* AddTripView.swift */,
+				2A95999728A8346200ADBE90 /* TripListView.swift */,
+			);
+			path = Trip;
+			sourceTree = "<group>";
+		};
+		2A772BF328AA104F009EE47A /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				2A772BF428AA1067009EE47A /* BusinessListView.swift */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		2A772BF828AA3126009EE47A /* Tinder */ = {
+			isa = PBXGroup;
+			children = (
+				2ACF12A728A6A5C70035BD4D /* TinderAddBusinessView.swift */,
+				2A772BF928AA314A009EE47A /* TinderBusinessViewModel.swift */,
+				2A772BFD28AA882E009EE47A /* CardView.swift */,
+				2A772BFF28AA93EC009EE47A /* TinderStackView.swift */,
+			);
+			path = Tinder;
+			sourceTree = "<group>";
+		};
 		2A91C26F28A86417004D8096 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,9 +114,10 @@
 		2A95999628A8341E00ADBE90 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2ACF12A728A6A5C70035BD4D /* TinderAddBusinessView.swift */,
-				2A95999728A8346200ADBE90 /* TripListView.swift */,
-				2A91C27128A86CBD004D8096 /* AddTripView.swift */,
+				2A772BF828AA3126009EE47A /* Tinder */,
+				2A772BF328AA104F009EE47A /* Business */,
+				2A772BF228AA1041009EE47A /* Trip */,
+				2A772BF628AA2DF4009EE47A /* ActivityView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -77,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				2AA4A33E28A6B5BE0052828B /* HelperViews */,
+				2A4B0E7D28A98F560086895E /* Extensions */,
 			);
 			path = "Helpers&Extensions";
 			sourceTree = "<group>";
@@ -222,14 +272,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A772BFE28AA882E009EE47A /* CardView.swift in Sources */,
 				2A95999828A8346200ADBE90 /* TripListView.swift in Sources */,
+				2A772C0028AA93EC009EE47A /* TinderStackView.swift in Sources */,
 				2ACF12A828A6A5C70035BD4D /* TinderAddBusinessView.swift in Sources */,
+				2A772BF528AA1067009EE47A /* BusinessListView.swift in Sources */,
 				2A91C27228A86CBD004D8096 /* AddTripView.swift in Sources */,
 				2ACF12B528A6A7100035BD4D /* Business.swift in Sources */,
+				2A772BF728AA2DF4009EE47A /* ActivityView.swift in Sources */,
 				2ACF12A628A6A5C70035BD4D /* Segue3App.swift in Sources */,
+				2A4B0E7C28A98F4B0086895E /* CustomEnvironmentProperties.swift in Sources */,
 				2A95999C28A83A5200ADBE90 /* Trip.swift in Sources */,
 				2AA4A34128A6E8300052828B /* TripController.swift in Sources */,
 				2ACF12BA28A6A7AC0035BD4D /* YelpFusionController.swift in Sources */,
+				2A772BFA28AA314A009EE47A /* TinderBusinessViewModel.swift in Sources */,
 				2ACF12BC28A6A7D00035BD4D /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
